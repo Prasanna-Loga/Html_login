@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<style>
+	body {
+		background-color: #E0E0E0;
+		font-family: Arial,Verdana,Helvetica,sans-serif;
+		align-content: center;
+		width: 98%;
+		height: 100%;    
+		margin: 10px;  /*Space from this element (entire page) and others*/
+		padding: 20px; /*space from content and border*/
+		border: solid gray;
+		border-width: thin;
+		display:block;
+	}
+
+	.test{
+		position:relative;
+		padding: 5px;
+		text-align:center;
+		text-size:15px;
+		text-transform: uppercase;
+		background-color: white;
+	}
+
+	a{
+		color: grey;
+		text-decoration: underline;
+	}
+
+	.button0 {
+		height:30px;
+		box-sizing: border-box;
+		border: 1px solid black;
+		background-color: lightgray;
+		resize: none;
+	}
+
+	.button1 {
+		background-color: dimgray;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		font-size: 20px;
+		cursor: pointer;
+		border-radius: 4px;
+		width: 200px;
+	}
+
+	.button2 {
+		height:40px;
+		background-color: #3B5998;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		font-size: 20px;
+		cursor: pointer;
+		border-radius: 4px;
+		width: 400px;
+	}
+
+		.button2 i {
+			margin-left: -360px;
+		}
+		.button2 h5 {
+			margin-top: -20px;
+		}
+
+	/*GLYPICON FOR FACEBOOK*/
+
+	.fa {	
+		font-size:15px;
+		color:#3B5998;
+		background-color:white;
+		padding-top:2px;
+		padding-right:2px;
+		padding-bottom:0px;
+		padding-left:5px;
+		border-radius:2px;
+	}
+	
+	/*VERTICAL DIVIDER FOR LARGE SCREEN SIZE*/
+	
+	.vertical-divider {
+		position:absolute; 
+		top: 50%;
+		left:90%;
+		width: auto;
+		height: 15%;
+		line-height: 100%;
+	}
+
+		.vertical-divider:before, 
+		.vertical-divider:after {
+			position: absolute; 
+			left: 50%; 
+			content: ''; 
+			border-left:1px solid black;
+		}
+
+		.vertical-divider:before {  
+			height: 100%;
+			top: -100%;
+		}
+
+		.vertical-divider:after {  
+			height: 180%;
+			top: 28%; 
+		}
+
+	/*HORIZONTAL LINE FOR SMALLER SCREEN SIZE*/
+	
+	.horizontal-divider {
+		position: absolute; 
+		top: 90%;
+		left: 45%;
+		width: auto;
+		height: auto;
+		line-height: 100%;
+	}
+
+		.horizontal-divider:before{
+			position: absolute; 
+			content: '';
+			border-top:1px solid black; 
+			top: 50%;
+			width: 1100%;
+			left: -500%;
+		}
+
+	/*RESPONSIVE SCREEN*/
+
+	@media only screen and (max-width: 767px) {
+
+		.vertical-divider {
+			display: none;
+		}
+	
+		.button2 {
+			width: 400px;
+		}
+		
+		.breaking {
+			display:none;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+    
+		.horizontal-divider {
+			display: none;
+		}
+	}	
+
+	@media only screen and (max-width: 500px) {
+		body{
+			align-content: center;
+			padding: 10px;
+		}
+		
+		h1{
+			font-size:28px;
+		}
+
+		h3{
+			font-size:18px;
+		}
+
+		.button0 {
+			width:250px;
+		}
+		
+		.button1 {
+			font-size: 15px;
+			width:160px;
+		}
+	
+		.button2 {
+			width: 320px;	
+		}
+	
+		.button2 i {
+			margin-top: 8px;
+			margin-left: -280px;
+		}
+		
+		.horizontal-divider:before {
+			width: 900%;
+			left: -400%;
+		}
+	}
+
+	@media only screen and (max-width: 321px){
+		
+		.button2 {
+			width: 290px;
+		}
+	
+		.button2 i {
+			margin-left: -250px;
+		}
+	}
+	
+	@media only screen 
+	and (min-width : 530px) and (max-width: 767px) {
+
+		body{
+			padding-left: 60px;
+		}
+
+		.Right{
+			margin-left: 5%;
+		}
+	}
+
+	@media only screen 
+	and (min-width : 768px) and (max-width: 1024px) {
+
+		h1{
+			font-size:28px;
+		}
+
+		h3{
+			font-size:18px;
+		}
+
+		.button0 {
+			width:250px;
+		}
+
+		.button1 {
+			font-size: 15px;
+			width:160px;
+		}
+
+		.button2 {
+			width:290px;
+		}
+	
+		.button2 i {
+			margin-top: 8px;
+			margin-left: -250px;
+		}
+		
+		.button2 h5 {
+			margin-top: -20px;
+		}
+	}
+
+	/* Desktops and laptops ----------- */
+	@media only screen 
+	and (min-width : 1224px) {
+	}
+
+</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-7">
+			<div class="container">
+    
+				<br/>  <br/>
+					<br/>
+				
+				<h1><B> Login </B>
+					<small>or <a href> Register a new Account</a>
+					</small>
+				</h1>
+
+				<br/><br/>
+
+				<div class="container-fluid">
+   
+					<h3><B> Forgot password? </B>
+
+					</h3>   
+					<br/>
+
+					<h3>Email ID *</h3>
+
+						<form action="/action_page.php">
+		  					<input class="button0" type="email" name="e-mail" placeholder="****@****.com" size="40" required><br/><br/><br/>
+		  						<button class="button1">Email Password</button>
+						</form>
+
+				</div>   
+			</div>
+		 	
+					<br/><br/><br/>
+					<br/><br/><br/>
+					<br/><br/><br/>
+			<div class="vertical-divider"><div class="test">or</div></div>
+			<div class="horizontal-divider"><div class="test">or</div></div>
+  
+		</div>
+	
+		<div class="col-sm-5">
+			<div class="Right">
+				<br/><br/>
+				<div class="breaking"><br/><br/><br/><br/><br/><br/><br/>
+				</div>
+				
+				<div class="container-fluid">
+				
+					<h3><B> Have a Facebook account? </B>
+
+					</h3>   
+					<br/> 
+				</div>
+			
+				<form action="https://www.facebook.com/">
+					<button class="button2">
+						<i class="fa fa-facebook"></i>
+							<h5>Log in with Facebook</h5>
+					</button>
+				</form>
+				<br/>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
